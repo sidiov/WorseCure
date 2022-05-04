@@ -1,0 +1,2 @@
+# WorseCure
+ffxi curebot
