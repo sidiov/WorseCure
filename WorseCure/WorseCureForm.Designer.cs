@@ -77,6 +77,9 @@
             this.num_c2 = new System.Windows.Forms.NumericUpDown();
             this.num_c3 = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cb_misery = new System.Windows.Forms.CheckBox();
+            this.cb_convert = new System.Windows.Forms.CheckBox();
+            this.num_aspir = new System.Windows.Forms.NumericUpDown();
             this.cb_darkarts = new System.Windows.Forms.CheckBox();
             this.num_Temper = new System.Windows.Forms.NumericUpDown();
             this.num_Regen = new System.Windows.Forms.NumericUpDown();
@@ -166,9 +169,13 @@
             this.cb_PUP1 = new System.Windows.Forms.ComboBox();
             this.cb_Deploy = new System.Windows.Forms.CheckBox();
             this.group_pup = new System.Windows.Forms.GroupBox();
-            this.num_aspir = new System.Windows.Forms.NumericUpDown();
-            this.cb_convert = new System.Windows.Forms.CheckBox();
-            this.cb_misery = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cb_follow = new System.Windows.Forms.CheckBox();
+            this.tb_follow = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nud_distance = new System.Windows.Forms.NumericUpDown();
+            this.combo_Food = new System.Windows.Forms.ComboBox();
+            this.cb_Food = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -183,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.num_c2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_c3)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_aspir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Temper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Regen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Ref)).BeginInit();
@@ -196,13 +204,14 @@
             this.tabPage8.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.num_aspir)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_distance)).BeginInit();
             this.SuspendLayout();
             // 
             // b_Start
             // 
             this.b_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Start.Location = new System.Drawing.Point(347, 407);
+            this.b_Start.Location = new System.Drawing.Point(707, 356);
             this.b_Start.Name = "b_Start";
             this.b_Start.Size = new System.Drawing.Size(96, 31);
             this.b_Start.TabIndex = 0;
@@ -220,7 +229,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(832, 24);
             this.menuStrip1.TabIndex = 64;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -782,6 +791,49 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Self Buffs";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cb_misery
+            // 
+            this.cb_misery.AutoSize = true;
+            this.cb_misery.Location = new System.Drawing.Point(12, 206);
+            this.cb_misery.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_misery.Name = "cb_misery";
+            this.cb_misery.Size = new System.Drawing.Size(94, 17);
+            this.cb_misery.TabIndex = 107;
+            this.cb_misery.Text = "Afflatus Misery";
+            this.cb_misery.UseVisualStyleBackColor = true;
+            // 
+            // cb_convert
+            // 
+            this.cb_convert.AutoSize = true;
+            this.cb_convert.Location = new System.Drawing.Point(130, 203);
+            this.cb_convert.Name = "cb_convert";
+            this.cb_convert.Size = new System.Drawing.Size(63, 17);
+            this.cb_convert.TabIndex = 106;
+            this.cb_convert.Text = "Convert";
+            this.cb_convert.UseVisualStyleBackColor = true;
+            // 
+            // num_aspir
+            // 
+            this.num_aspir.Location = new System.Drawing.Point(68, 317);
+            this.num_aspir.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.num_aspir.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.num_aspir.Name = "num_aspir";
+            this.num_aspir.Size = new System.Drawing.Size(32, 20);
+            this.num_aspir.TabIndex = 105;
+            this.num_aspir.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cb_darkarts
             // 
@@ -1933,54 +1985,125 @@
             this.group_pup.TabStop = false;
             this.group_pup.Text = "PUP";
             // 
-            // num_aspir
+            // panel2
             // 
-            this.num_aspir.Location = new System.Drawing.Point(68, 317);
-            this.num_aspir.Maximum = new decimal(new int[] {
+            this.panel2.Controls.Add(this.cb_follow);
+            this.panel2.Controls.Add(this.tb_follow);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.nud_distance);
+            this.panel2.Location = new System.Drawing.Point(694, 49);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(127, 84);
+            this.panel2.TabIndex = 78;
+            // 
+            // cb_follow
+            // 
+            this.cb_follow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_follow.AutoSize = true;
+            this.cb_follow.Location = new System.Drawing.Point(14, 16);
+            this.cb_follow.Name = "cb_follow";
+            this.cb_follow.Size = new System.Drawing.Size(59, 17);
+            this.cb_follow.TabIndex = 52;
+            this.cb_follow.Text = "Follow:";
+            this.cb_follow.UseVisualStyleBackColor = true;
+            // 
+            // tb_follow
+            // 
+            this.tb_follow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_follow.Enabled = false;
+            this.tb_follow.Location = new System.Drawing.Point(13, 34);
+            this.tb_follow.Name = "tb_follow";
+            this.tb_follow.Size = new System.Drawing.Size(109, 20);
+            this.tb_follow.TabIndex = 59;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Distance:";
+            // 
+            // nud_distance
+            // 
+            this.nud_distance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nud_distance.Enabled = false;
+            this.nud_distance.Location = new System.Drawing.Point(69, 60);
+            this.nud_distance.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.nud_distance.Minimum = new decimal(new int[] {
             2,
             0,
             0,
             0});
-            this.num_aspir.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.num_aspir.Name = "num_aspir";
-            this.num_aspir.Size = new System.Drawing.Size(32, 20);
-            this.num_aspir.TabIndex = 105;
-            this.num_aspir.Value = new decimal(new int[] {
-            1,
+            this.nud_distance.Name = "nud_distance";
+            this.nud_distance.Size = new System.Drawing.Size(35, 20);
+            this.nud_distance.TabIndex = 65;
+            this.nud_distance.Value = new decimal(new int[] {
+            5,
             0,
             0,
             0});
             // 
-            // cb_convert
+            // combo_Food
             // 
-            this.cb_convert.AutoSize = true;
-            this.cb_convert.Location = new System.Drawing.Point(130, 203);
-            this.cb_convert.Name = "cb_convert";
-            this.cb_convert.Size = new System.Drawing.Size(63, 17);
-            this.cb_convert.TabIndex = 106;
-            this.cb_convert.Text = "Convert";
-            this.cb_convert.UseVisualStyleBackColor = true;
+            this.combo_Food.FormattingEnabled = true;
+            this.combo_Food.Items.AddRange(new object[] {
+            "Pear Crepe",
+            "Crepe Belle Helene",
+            "Sublime Sushi",
+            "Sublime Sushi +1",
+            "Red Curry Bun",
+            "Red Curry Bun +1",
+            "Sole Sushi",
+            "Sole Sushi +1",
+            "Bream Sushi",
+            "Bream Sushi +1",
+            "Squid Sushi",
+            "Squid Sushi +1",
+            "Miso Ramen",
+            "Miso Ramen +1",
+            "Marine Stewpot",
+            "Riverfin Soup",
+            "Oceanfin Soup",
+            "Dragon Steak",
+            "Tavnazian Taco",
+            "Leremieu Taco",
+            "Pork Cutlet Bowl",
+            "Pork Cutlet Bowl +1",
+            "Pork Cutlet",
+            "Pork Cutlet +1",
+            "Cutlet Sandwich",
+            "Cutlet Sandwich +1"});
+            this.combo_Food.Location = new System.Drawing.Point(700, 160);
+            this.combo_Food.Name = "combo_Food";
+            this.combo_Food.Size = new System.Drawing.Size(121, 21);
+            this.combo_Food.TabIndex = 80;
             // 
-            // cb_misery
+            // cb_Food
             // 
-            this.cb_misery.AutoSize = true;
-            this.cb_misery.Location = new System.Drawing.Point(12, 206);
-            this.cb_misery.Margin = new System.Windows.Forms.Padding(2);
-            this.cb_misery.Name = "cb_misery";
-            this.cb_misery.Size = new System.Drawing.Size(94, 17);
-            this.cb_misery.TabIndex = 107;
-            this.cb_misery.Text = "Afflatus Misery";
-            this.cb_misery.UseVisualStyleBackColor = true;
+            this.cb_Food.AutoSize = true;
+            this.cb_Food.ForeColor = System.Drawing.Color.Red;
+            this.cb_Food.Location = new System.Drawing.Point(700, 142);
+            this.cb_Food.Name = "cb_Food";
+            this.cb_Food.Size = new System.Drawing.Size(72, 17);
+            this.cb_Food.TabIndex = 79;
+            this.cb_Food.Text = "Use Food";
+            this.cb_Food.UseVisualStyleBackColor = true;
             // 
             // WorseCureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(832, 406);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.combo_Food);
+            this.Controls.Add(this.cb_Food);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.b_Start);
@@ -2003,6 +2126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.num_c3)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_aspir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Temper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Regen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Ref)).EndInit();
@@ -2022,7 +2146,9 @@
             this.panel1.PerformLayout();
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.num_aspir)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_distance)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2171,6 +2297,13 @@
         private System.Windows.Forms.NumericUpDown num_aspir;
         private System.Windows.Forms.CheckBox cb_convert;
         private System.Windows.Forms.CheckBox cb_misery;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.CheckBox cb_follow;
+        private System.Windows.Forms.TextBox tb_follow;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown nud_distance;
+        private System.Windows.Forms.ComboBox combo_Food;
+        private System.Windows.Forms.CheckBox cb_Food;
     }
 }
 
