@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WorseCure3
+namespace WorseCure
 {
     public partial class POLSelect : Form
     {

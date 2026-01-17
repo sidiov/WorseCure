@@ -1,4 +1,4 @@
-﻿namespace WorseCure3
+﻿namespace WorseCure
 {
     partial class POLSelect
     {
